@@ -1,4 +1,7 @@
-int diagonalDifference(vector<vector<int>> arr) {
+#include <bits/stdc++.h>
+using namespace std;
+
+int diagonalDifference(vector<vector<int>>& arr) {
     
     int n=arr.size();
     int i=0;
@@ -25,4 +28,19 @@ int diagonalDifference(vector<vector<int>> arr) {
     }
     
     return abs(sum1-sum2);
+}
+
+int main()
+{
+    int n;
+    cin>>n;
+    
+    vector<vector<int>> v(n,vector<int>(n));
+    for(int i=0;i<n;i++)
+    {
+        for(int j=0;j<n;j++) cin>>v[i][j];
+    }
+    
+    cout<<diagonalDifference(v)<<endl;
+    return 0;
 }
